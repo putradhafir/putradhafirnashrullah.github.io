@@ -1,42 +1,135 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tugas 2 - Putra Dhafir
-    </title>
-    <!-- Menghubungkan file CSS -->
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Laporan OOP Dart - Interaktif</title>
+
+<style>
+body{
+  font-family: Arial, sans-serif;
+  margin:40px;
+  background:#f4f6f9;
+}
+
+h1{
+  color:#2c3e50;
+}
+
+.section{
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  margin-bottom:30px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+button{
+  padding:10px 18px;
+  background:#007bff;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#0056b3;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.85);
+  z-index:9999;
+}
+
+.modal-content{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:95%;
+  max-width:1100px;
+  height:85%;
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+.modal iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Bagian Header (Judul Atas) -->
-    <header>
-        <h1>Putra Dhafir Nashrullah</h1>
-        <p>Ini adalah halamantugas saya</p>
-    </header>
+<h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h1>
+<p><b>Nama:</b> Putra Dhafir Nashrullah <br>
+<b>NIM:</b> 251410024</p>
 
-    <!-- Bagian Utama (Isi Konten) -->
-    <main>
-        <section id="tentang">
-            <h2>Tentang Saya</h2>
-            <p>Halo, saya adalah seorang siswa yang sedang belajar membuat website bersama pak Afriyudi.</p>
-        </section>
+<div class="section">
+<h2>1. Class & Object (Car)</h2>
+<button onclick="openModal('ISI_ID_DARTPAD_1')">
+Lihat Source & Jalankan
+</button>
+</div>
 
-        <section id="materi">
-            <h2>Materi Tugas</h2>
-            <ul>
-                <li>HTML Dasar</li>
-                <li>CSS Styling</li>
-                <li>GitHub Pages</li>
-            </ul>
-        </section>
-    </main>
+<div class="section">
+<h2>2. Constructor</h2>
+<button onclick="openModal('ISI_ID_DARTPAD_2')">
+Lihat Source & Jalankan
+</button>
+</div>
 
-    <!-- Bagian Footer (Bagian Bawah) -->
-    <footer>
-        <p>&copy; 2025 Dibuat oleh Putra</p>
-    </footer>
+<div class="section">
+<h2>3. Validasi Constructor (Mahasiswa)</h2>
+<button onclick="openModal('ISI_ID_DARTPAD_3')">
+Lihat Source & Jalankan
+</button>
+</div>
+
+<div class="section">
+<h2>4. Encapsulation (Person)</h2>
+<button onclick="openModal('ISI_ID_DARTPAD_4')">
+Lihat Source & Jalankan
+</button>
+</div>
+
+<div class="section">
+<h2>5. Named Parameter (Produk)</h2>
+<button onclick="openModal('ISI_ID_DARTPAD_5')">
+Lihat Source & Jalankan
+</button>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <iframe id="dartFrame"></iframe>
+  </div>
+</div>
+
+<script>
+function openModal(dartId){
+  document.getElementById("modal").style.display="block";
+  document.getElementById("dartFrame").src =
+  "https://dartpad.dev/embed-dart.html?id=" + dartId;
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display="none";
+  document.getElementById("dartFrame").src="";
+}
+</script>
 
 </body>
 </html>
