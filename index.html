@@ -3,38 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Laporan OOP Dart - Interaktif</title>
+<title>Laporan OOP Dart - Putra Dhafir</title>
 
 <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
 body{
-  font-family: Arial, sans-serif;
-  margin:40px;
-  background:#f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:white;
 }
 
-h1{
-  color:#2c3e50;
+/* NAVBAR */
+nav{
+  padding:20px 40px;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
 }
 
-.section{
-  background:white;
-  padding:25px;
-  border-radius:10px;
+nav h1{
+  font-size:22px;
+}
+
+/* CONTAINER */
+.container{
+  padding:50px 10%;
+}
+
+.profile{
+  margin-bottom:40px;
+  line-height:1.8;
+  opacity:0.9;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.1);
+  padding:30px;
+  border-radius:15px;
   margin-bottom:30px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 button{
-  padding:10px 18px;
-  background:#007bff;
-  color:white;
+  margin-top:15px;
+  padding:12px 20px;
   border:none;
-  border-radius:6px;
+  border-radius:8px;
+  background:#00c6ff;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:white;
   cursor:pointer;
+  font-weight:bold;
 }
 
 button:hover{
-  background:#0056b3;
+  opacity:0.8;
 }
 
 /* MODAL */
@@ -45,8 +81,8 @@ button:hover{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.85);
-  z-index:9999;
+  background:rgba(0,0,0,0.9);
+  z-index:999;
 }
 
 .modal-content{
@@ -55,10 +91,10 @@ button:hover{
   left:50%;
   transform:translate(-50%,-50%);
   width:95%;
-  max-width:1100px;
+  max-width:1200px;
   height:85%;
   background:white;
-  border-radius:10px;
+  border-radius:15px;
   overflow:hidden;
 }
 
@@ -72,43 +108,42 @@ button:hover{
 
 <body>
 
-<h1>LAPORAN OBJECT ORIENTED PROGRAMMING (OOP) - DART</h1>
-<p><b>Nama:</b> Putra Dhafir Nashrullah <br>
-<b>NIM:</b> 251410024</p>
+<nav>
+  <h1>Laporan OOP Dart - Putra Dhafir Nashrullah</h1>
+</nav>
 
-<div class="section">
+<div class="container">
+
+<div class="profile">
+<b>NIM:</b> 251410024 <br>
+Mata Kuliah: Object Oriented Programming (OOP) - Dart
+</div>
+
+<div class="card">
 <h2>1. Class & Object (Car)</h2>
-<button onclick="openModal('ISI_ID_DARTPAD_1')">
-Lihat Source & Jalankan
-</button>
+<button onclick="openModal('ISI_ID_1')">Lihat Source & Jalankan</button>
 </div>
 
-<div class="section">
+<div class="card">
 <h2>2. Constructor</h2>
-<button onclick="openModal('ISI_ID_DARTPAD_2')">
-Lihat Source & Jalankan
-</button>
+<button onclick="openModal('ISI_ID_2')">Lihat Source & Jalankan</button>
 </div>
 
-<div class="section">
+<div class="card">
 <h2>3. Validasi Constructor (Mahasiswa)</h2>
-<button onclick="openModal('ISI_ID_DARTPAD_3')">
-Lihat Source & Jalankan
-</button>
+<button onclick="openModal('ISI_ID_3')">Lihat Source & Jalankan</button>
 </div>
 
-<div class="section">
+<div class="card">
 <h2>4. Encapsulation (Person)</h2>
-<button onclick="openModal('ISI_ID_DARTPAD_4')">
-Lihat Source & Jalankan
-</button>
+<button onclick="openModal('ISI_ID_4')">Lihat Source & Jalankan</button>
 </div>
 
-<div class="section">
+<div class="card">
 <h2>5. Named Parameter (Produk)</h2>
-<button onclick="openModal('ISI_ID_DARTPAD_5')">
-Lihat Source & Jalankan
-</button>
+<button onclick="openModal('ISI_ID_5')">Lihat Source & Jalankan</button>
+</div>
+
 </div>
 
 <!-- MODAL -->
